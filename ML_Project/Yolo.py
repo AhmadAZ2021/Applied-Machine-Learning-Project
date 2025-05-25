@@ -2,11 +2,11 @@ from ultralytics import YOLO
 import multiprocessing
 
 def main():
-    model = YOLO(r"C:\Users\20248106\Desktop\mapillary\runs\detect\yolo8s-traffic-sign6\weights\best.pt")  # Use yolov8m.pt or yolov8l.pt for stronger models if GPU allows
+    model = YOLO(r"<Yolo Model>")  
 
-    # Train the model
+    
     model.train(
-        data=r'C:\Users\20248106\Desktop\mapillary\dataset.yaml',
+        data=r'<Yaml file Path>',
         epochs=50,
         imgsz=640,
         batch=32,  
@@ -18,5 +18,5 @@ def main():
     )
 
 if __name__ == '__main__':
-    multiprocessing.set_start_method('spawn')  # Required for Windows
+    multiprocessing.set_start_method('spawn')  
     main()
